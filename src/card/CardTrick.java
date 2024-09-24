@@ -53,9 +53,9 @@ public class CardTrick {
         // and search magicHand here
         //Then report the result here
         // add one luckcard hard code 2,clubs
-//        Card luckCard = new Card();
-//        luckCard.setValue(2);
-//        luckCard.setSuit("clubs");
+       Card luckCard = new Card();
+       luckCard.setValue(2);
+       luckCard.setSuit("clubs");
     }
     
 }
