@@ -26,20 +26,14 @@ public class CardTrick {
             c.setSuit(Card.SUITS[rand.nextInt(0, 3)]);
             magicHand[i] = c;
         }
-        // User Input
-        Card userCard = new Card();
-        System.out.println("Enter Card Value");
-        int value = scan.nextInt();
-        userCard.setValue(value);
-        
-        System.out.println("Enter Card Suit");
-        String suit = scan.next();
-        userCard.setSuit(suit);
+         Card luckCard = new Card();
+         luckCard.setValue(2);
+         luckCard.setSuit("clubs");
         
         // Search The hand for user card
         boolean found = false;
         for (int i = 0; i < magicHand.length; i++) {
-            if (magicHand[i].getValue() == value && magicHand[i].getSuit().equals(suit)) {
+            if (magicHand[i].getValue() == luckCard.getValue() && magicHand[i].getSuit().equals(luckCard.getSuit())) {
                 System.out.println("Card Found at index: " + i);
                 found = true;
                 break; // Exit the loop once a match is found
@@ -53,9 +47,6 @@ public class CardTrick {
         // and search magicHand here
         //Then report the result here
         // add one luckcard hard code 2,clubs
-       Card luckCard = new Card();
-       luckCard.setValue(2);
-       luckCard.setSuit("clubs");
     }
     
 }
